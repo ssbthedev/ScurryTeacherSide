@@ -18,7 +18,7 @@ Teachers must first create an account with an email, password, name, and prefix.
 On the home page, the teacher can log out or create a class (aka Burrows). These burrows are then given an image, color, and name. The home page lists all the burrows created.
 ![Home](/mdAssets/homePage.png)
 *All Burrows*
-![Burrows](/mdAssets/createBurrow.png)
+![Create](/mdAssets/createBurrow.png)
 *Create a Burrow*
 
 # Burrow Page
