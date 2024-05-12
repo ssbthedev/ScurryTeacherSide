@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scurry</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <link href="navbar.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Padauk&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8470cdfca3.js" crossorigin="anonymous"></script>
+
+</head>
+<header class="header-area">
+    <div class="container">
+        <nav class="site-navbar">
+            <a href="index.html" class="left-bound" id="scurryLogo">scurry<i class="teacherLogo fa-solid fa-person-chalkboard"></i></a>
+            <ul>
+                <li><p id="welcomeMessage"></p></li>
+                <li><p id="navPlusButton"><i  class="fa fa-plus" aria-hidden="true"></i></p></li>
+                <li><p id="navSignOutButton"><i class="fa-solid fa-right-to-bracket"></i></p></li>
+            </ul> 
+        </nav>
+    </div>
+</header>
+<body>
+    <div id="overlay"></div>
+    <div class="new-class-popup popup" id="newClassForm">
+        <form class="form-container">
+            <p id="enterBurrowDetails"><b>Enter burrow details:</b></p>
+            <div class="indent">
+                <p id="burrowName">Burrow Name:</p>
+                <input type="text" id="enterBurrowName" required/>
+                <p id="burrowColor">Burrow color:</p>
+                <div class="colorOptions">
+                    <p id="red"><i id="red-blotch" class="fa-solid fa-splotch"></i></p>
+                    <p id="orange"><i id="orange-blotch" class="fa-solid fa-splotch"></i></p>
+                    <p id="yellow"><i id="yellow-blotch" class="fa-solid fa-splotch"></i></p>
+                    <p id="green"><i id="green-blotch" class="fa-solid fa-splotch"></i></p>
+                    <p id="blue"><i id="blue-blotch" class="fa-solid fa-splotch"></i></p>
+                </div>
+                <p id="burrowImage">Burrow image:</p>
+                <div class="squirrelImgOptions">
+                    <img src="images\squirrel1.jpg" id="squirrel1"/>
+                    <img src="images\squirrel2.jpg" id="squirrel2"/>
+                    <img src="images\squirrel3.jpg" id="squirrel3"/>
+                    <img src="images\squirrel4.jpg" id="squirrel4"/>
+                </div>
+                <p id="errorMessageBurrow"></p> <!-- Error Message -->
+            </div>
+            <div class="buttonRow">
+                <button type = "button" class="btn" id="submitNewClass">submit</button>
+                <button type = "button" class="btn" id="cancelNewClass">cancel</button>
+            </div>
+        </form>
+    </div>
+    <div class="logIn-popup popup" id="logInForm">
+        <form class="form-container">
+            <p id="enterBurrowDetails"><b>Sign Into Your Burrow Hub</b></p>
+            <div class="indent">
+                <label><b>Email: </b></label>
+    			<input type="email" placeholder="Enter Email" id="email" required>
+                <br>
+    			<label><b>Password: </b></label>
+    			<input type="password" placeholder="Enter Password" id="password" required> 
+                <div id="signUpMore">
+                    <h2 id="enterMore">Enter More Details:</h2>
+                    <label><b>Name: </b></label>
+                    <input type="text" placeholder="Enter Your Name" id="signUp-Name" required>
+                    <br>
+                    <label><b>Prefix: </b></label>
+                    <input type="text" placeholder="Enter Prefix" id="signUp-Prefix" required>
+                </div>  
+                <p id="errorMessageLogin"></p> <!-- Error Message -->
+            <div class="buttonRow">
+                <button type = "button" class="btn" id="logIn-submit">Log In</button>
+                <button type = "button" class="btn" id="signUp-submit">Sign Up</button>
+            </div>  
+        </form>          
+    </div>
+    <script type = "module" src="script.js" defer></script>
+    <script type = "module" src="realtimeFirebase.js"></script>
+    <script type = "module" src="authenticationFirebase.js"></script> 
+    <script src="publicVariables.js"></script>
+</body>
+</html>

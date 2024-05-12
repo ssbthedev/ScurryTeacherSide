@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burrow Page</title>
+    <link href="/navbar.css" rel="stylesheet" type="text/css" />
+    <link href="burrowPage.css" rel="stylesheet" type="text/css" />
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Padauk&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8470cdfca3.js" crossorigin="anonymous"></script>
+    <script type="module" src="burrowPage.js" defer></script>
+
+</head> 
+<header class="header-area">
+    <div class="container"  id="header-area">
+        <nav class="site-navbar">
+            <a class="left-bound" id="scurryLogo" >scurry<i class="teacherLogo fa-solid fa-person-chalkboard"></i></a>
+            <ul>
+                <li><p id="welcomeClassMessage"></p></li>
+                <li><p><i id="newtask" class="fa fa-plus" aria-hidden="true" style="cursor:pointer;"></i></p></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <!-- <script type = "module" src="firebase.js"></script> -->
+    <script src="/publicVariables.js"></script>
+
+    <div class="new-assignment-popup" id="newAssignmentForm">
+        <form class="form-container">
+            <p id="enterAssignmentDetails"><b>Enter task details:</b></p>
+            <div class="indent">
+                <div style="display:flex; flex-direction: row; align-items: center;">
+                    <p style="margin-right:10px">Task Name:</p>
+                    <input type="text" id="enterTaskName" required/>
+                </div>
+                <div style="display:flex; flex-direction: row; align-items: center;">
+                    <p style="margin-right:10px">Task category:</p>
+                    <select name="enterTaskCategory" id="enterTaskCategory">
+                        <option value="Homework">Homework</option>
+                        <option value="Classwork">Classwork</option>
+                        <option value="Quiz">Quiz</option>
+                        <option value="Test">Test</option>
+                        <option value="Other">Other</option>
+                    </select>
+        
+                </div>
+                <div style="display:flex; flex-direction: row; align-items: center;">
+                    <p style="margin-right:10px">Task description:</p>
+                    <input type="text" id="enterTaskDesc" required/>
+                </div>
+                <div style="display:flex; flex-direction: row; align-items: center;">
+                    <p style="margin-right:10px">Task due date:</p>
+                    <input type="date" id="enterBurrowDue" required/>
+                </div>
+                <div style="display:flex; flex-direction: row; align-items: center;">
+                    <p style="margin-right:10px">Acorns if early:</p>
+                    <input type="number" min="0" style="width:40px;" id="enterBurrowEarly" required/>
+                    <img src="/./images/acorn.svg" style="height:20px"/>
+
+                    <p style="margin-right:10px; margin-left:60px;">Acorns if on time:</p>
+                    <input type="number" min="0" style="width:40px;" id="enterBurrowOnTime" required/>
+                    <img src="/./images/acorn.svg" style="height:20px"/>
+                </div>
+            </div>
+            <div class="buttonRow" style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
+                <button type = "button" class="btn" id="submitNewTask">submit</button>
+                <button type = "button" class="btn" id="cancelNewTask">cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="grade-work-popup" id="gradeStudentWorkForm" style="display:none">
+        <form class="form-container">
+            <p id="gradeHeader"><b></b></p>
+            <p id="gradeHeaderLabel"><b>Grade student work: </b></p>
+            <div id="students"></div>
+            <div class="buttonRow" style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
+                <button type = "button" class="btn" id="saveGrades">save</button>
+                <button type = "button" class="btn" id="cancelGrades">close</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

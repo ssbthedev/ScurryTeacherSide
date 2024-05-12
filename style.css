@@ -1,0 +1,44 @@
+*{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.indent{
+    margin-left: 10px;
+}
+
+body {
+    background-image: url(images/woodlandBackground.png);
+    background-size: 100vw 100vh;
+}
+
+input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+
+.btn{
+    background-color: #5ab0e6;
+    border: none;
+    color: white;
+    padding: 10px 20px 10px 20px; /*TRBL*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: #2378ad;
+}
+
+.popup{
+    display: none;
+}
+
+.teacherLogo{
+    margin-left: 5px;
+}
